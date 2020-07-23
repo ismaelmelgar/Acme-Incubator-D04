@@ -1,0 +1,27 @@
+  
+# i18n_es.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+administrator.overture.form.label.title = Titulo
+administrator.overture.form.label.creation = Creacion
+administrator.overture.form.label.deadline = Fecha limite
+administrator.overture.form.label.description = Descripcion
+administrator.overture.form.label.maxMoney = Maximo
+administrator.overture.form.label.minMoney = Minimo
+administrator.overture.form.label.email = Email
+
+administrator.overture.form.error.format = Solo esta permitido el uso del euro (EUR or €)
+administrator.overture.form.error.max = La cantidad máxima debe ser mayor que la mínima.
+administrator.overture.error.deadline = La fecha limite debe ser posterior a la fecha de creación.
+
+administrator.overture.form.button.create = Crear
+administrator.overture.form.button.update = Editar
+administrator.overture.form.button.delete = Borrar
+.overture.form.button.return = Volver

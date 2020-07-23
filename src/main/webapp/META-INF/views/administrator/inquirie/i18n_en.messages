@@ -1,0 +1,27 @@
+# i18n_en.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+administrator.inquirie.label.title = Title
+administrator.inquirie.label.creationMoment = Creation
+administrator.inquirie.label.deadline = Deadline
+administrator.inquirie.label.description = Description
+administrator.inquirie.label.minMoney = Min. Money
+administrator.inquirie.label.maxMoney = Max. Money
+administrator.inquirie.label.email = Email
+
+administrator.inquirie.error.deadline.veryClose = The deadline is very close to the creation date. You must register at least one month in the future
+administrator.inquirie.error.minMoney.LessMaxMoney = The minimum money must be less than the maximum money
+administrator.inquirie.error.maxMoney.HigherMinMoney = The maximum money must be higher than the min money
+
+administrator.inquirie.button.create = Create
+administrator.inquirie.button.update = Update
+administrator.inquirie.button.delete = Delete
+
+administrator.inquirie.form.button.return = Return

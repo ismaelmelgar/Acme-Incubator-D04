@@ -1,0 +1,27 @@
+# i18n_es.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+anonymous.melgarBulletin.form.label.author = Autor:
+anonymous.melgarBulletin.form.label.text = Texto:
+anonymous.melgarBulletin.form.button.create = Gritar
+anonymous.melgarBulletin.form.button.return = Volver
+
+anonymous.melgarBulletin.list.label.moment = Momento
+anonymous.melgarBulletin.list.label.author = Autor
+anonymous.melgarBulletin.list.label.text = Texto
+
+anonymous.minuesaBulletin.form.label.author = Autor:
+anonymous.minuesaBulletin.form.label.text = Texto:
+anonymous.minuesaBulletin.form.button.create = Gritar
+anonymous.minuesaBulletin.form.button.return = Volver
+
+anonymous.minuesaBulletin.list.label.moment = Momento
+anonymous.minuesaBulletin.list.label.author = Autor
+anonymous.minuesaBulletin.list.label.text = Texto

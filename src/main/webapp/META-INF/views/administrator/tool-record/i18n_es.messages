@@ -1,0 +1,31 @@
+# i18n_en.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+administrator.tool-record.label.title = Titulo:
+administrator.tool-record.label.activitySector = Sector:
+administrator.tool-record.label.inventor = Autor:
+administrator.tool-record.label.description = Descripcion:
+administrator.tool-record.label.web = Web:
+administrator.tool-record.label.email = Email:
+administrator.tool-record.label.sourceType = Modelo:
+administrator.tool-record.label.sourceType.check = Modelo (marca la casilla si es open-source):
+administrator.tool-record.label.sourceType.update = Modelo (si va a actualizar este registro, vuelva a comprobar el tipo de modelo que desea):
+administrator.tool-record.label.sourceType.open = Codigo abierto
+administrator.tool-record.label.sourceType.closed = Codigo cerrado
+administrator.tool-record.label.stars = Valoracion:
+
+administrator.tool-record.form.buttom.create = Crear
+administrator.tool-record.form.buttom.update = Editar
+administrator.tool-record.form.buttom.delete = Borrar
+administrator.tool-record.form.button.return = Volver
+
+administrator.tool-record.list.label.title = Titulo
+administrator.tool-record.list.label.inventor = Autor
+administrator.tool-record.label.link = Link

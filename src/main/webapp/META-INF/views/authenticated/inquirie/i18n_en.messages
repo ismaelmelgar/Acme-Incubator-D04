@@ -1,0 +1,19 @@
+# i18n_en.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+authenticated.inquirie.label.title = Title
+authenticated.inquirie.label.creationMoment = Creation
+authenticated.inquirie.label.deadline = Deadline
+authenticated.inquirie.label.description = Description
+authenticated.inquirie.label.minMoney = Min. Money
+authenticated.inquirie.label.maxMoney = Max. Money
+authenticated.inquirie.label.email = Email
+
+authenticated.inquirie.form.button.return = Return
