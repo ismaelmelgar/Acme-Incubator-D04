@@ -51,6 +51,8 @@ master.menu.bulletin.dos.minuesaBulletin.form = Shout to Minuesa!
 
 master.menu.authenticated = Authenticated
 
+master.menu.authenticated.investmentRound.list = Investment Rounds
+
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrator
@@ -69,11 +71,6 @@ master.menu.administrator.challenges.create = Create challenge
 master.menu.administrator.technologyRecords.list = Technology Records
 master.menu.administrator.technologyRecords.create = Create technology record
 
-master.menu.administrator.toolRecords.list = Tool Records
-master.menu.administrator.toolRecords.create = Create tool record
-
-master.menu.administrator.overtures.list = Overtures
-master.menu.administrator.overtures.create = Create overtures
 
 # master.menu.provider ########################################################
 
@@ -84,6 +81,19 @@ master.menu.provider.favourite-link = Favourite link
 
 master.menu.consumer = Consumer
 master.menu.consumer.favourite-link = Favourite link
+
+# master.menu.entrepreneur #####################################################
+
+master.menu.entrepreneur = Entrepreneur
+
+master.menu.entrepreneur.investmentRound.listMine = My Investment Rounds
+master.menu.entrepreneur.application.listMine = Applications To My Investment Rounds
+
+# master.menu.investor #########################################################
+
+master.menu.investor = Investor
+
+master.menu.investor.application.listMine = My Applications
 
 # master.menu.user-account ####################################################
 

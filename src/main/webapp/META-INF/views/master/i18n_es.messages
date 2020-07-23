@@ -28,7 +28,7 @@ master.menu.sign-out = Salir
 
 master.menu.notices.list = Avisos
 master.menu.technologyRecords.list = Registro de Tecnologias
-master.menu.toolRecords.list = Registros de Herramientas
+master.menu.toolRecords.list = Registros de herramientas
 master.menu.inquiries.list = Consultas
 master.menu.overtures.list = Propuestas
 master.menu.challenges.list = Retos
@@ -51,6 +51,8 @@ master.menu.bulletin.dos.minuesaBulletin.form = ¡Grita a Minuesa!
 # master.menu.authenticated ###################################################
 
 master.menu.authenticated = Autenticado
+
+master.menu.authenticated.investmentRound.list = Rondas de Inversion
 
 # master.menu.administrator ###################################################
 
@@ -79,6 +81,19 @@ master.menu.provider.favourite-link = Enlace favorito
 
 master.menu.consumer = Consumidor
 master.menu.consumer.favourite-link = Enlace favorito
+
+# master.menu.entrepreneur #####################################################
+
+master.menu.entrepreneur = Empresario
+
+master.menu.entrepreneur.investmentRound.listMine = Mis Rondas de Inversion
+master.menu.entrepreneur.application.listMine = Solicitudes a Mis Rondas de Inversion
+
+# master.menu.investor #########################################################
+
+master.menu.investor = Inversor
+
+master.menu.investor.application.listMine = Mis solicitudes
 
 # master.menu.user-account ####################################################
 
