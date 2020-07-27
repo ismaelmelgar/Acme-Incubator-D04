@@ -61,6 +61,9 @@
 			<!--  Challenges -->
 			<acme:menu-separator />
 			<acme:menu-suboption code="master.menu.challenges.list" action="/authenticated/challenge/list" />
+			<!--  Investment Rounds -->
+			<acme:menu-separator />
+			<acme:menu-suboption code="master.menu.authenticated.investmentRound.list" action="/authenticated/investment-round/list" />
 		</acme:menu-option>
 
 		<%--------------------Administrator--------------------%>
@@ -85,14 +88,6 @@
 			<acme:menu-separator />
 			<acme:menu-suboption code="master.menu.administrator.technologyRecords.list" action="/administrator/technology-record/list" />
 			<acme:menu-suboption code="master.menu.administrator.technologyRecords.create" action="/administrator/technology-record/create" />
-			<!--  Tool Record -->
-			<acme:menu-separator />
-			<acme:menu-suboption code="master.menu.administrator.toolRecords.list" action="/administrator/tool-record/list" />
-			<acme:menu-suboption code="master.menu.administrator.toolRecords.create" action="/administrator/tool-record/create" />
-			<!--  Overture -->
-			<acme:menu-separator />
-			<acme:menu-suboption code="master.menu.administrator.overtures.list" action="/administrator/overture/list" />
-			<acme:menu-suboption code="master.menu.administrator.overtures.create" action="/administrator/overture/create" />
 			<!--  Shutdown -->
 			<acme:menu-separator />
 			<acme:menu-suboption code="master.menu.administrator.shutdown" action="/master/shutdown" />
@@ -107,6 +102,18 @@
 		<acme:menu-option code="master.menu.consumer" access="hasRole('Consumer')">
 			<acme:menu-suboption code="master.menu.consumer.favourite-link" action="http://www.example.com/" />
 		</acme:menu-option>
+		
+		<%--------------------Entrepreneur--------------------%>
+		<acme:menu-option code="master.menu.entrepreneur" access="hasRole('Entrepreneur')">
+			<acme:menu-suboption code="master.menu.entrepreneur.investmentRound.listMine" action="/entrepreneur/investment-round/list-mine" />
+			<acme:menu-suboption code="master.menu.entrepreneur.application.listMine" action="/entrepreneur/application/list-mine" />
+		</acme:menu-option>
+	
+		<%--------------------Investor--------------------%>
+		<acme:menu-option code="master.menu.investor" access="hasRole('Investor')">
+			<acme:menu-suboption code="master.menu.investor.application.listMine" action="/investor/application/list-mine" />
+		</acme:menu-option>
+		
 	</acme:menu-left>
 
 	<acme:menu-right>
