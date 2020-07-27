@@ -9,13 +9,13 @@
 # they accept any liabilities with respect to them.
 
 entrepreneur.investmentRound.label.ticker = Ticker
-entrepreneur.investmentRound.label.creationMoment = Creation
+entrepreneur.investmentRound.label.creation = Creation
 entrepreneur.investmentRound.label.round = Round
 entrepreneur.investmentRound.label.title = Title
 entrepreneur.investmentRound.label.description = Description
-entrepreneur.investmentRound.label.amountMoney = Amount Money
+entrepreneur.investmentRound.label.amountMoney = Amount of Money
 entrepreneur.investmentRound.label.moreInfo = More Info
-entrepreneur.investmentRound.label.entrepreneur = Registered by 
+entrepreneur.investmentRound.label.entrepreneur = Entrepreneur
 
 entrepreneur.investmentRound.form.button.workProgramme = Work Programme
 
