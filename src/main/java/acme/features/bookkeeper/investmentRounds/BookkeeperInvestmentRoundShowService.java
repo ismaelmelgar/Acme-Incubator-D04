@@ -8,11 +8,9 @@ import org.springframework.stereotype.Service;
 
 import acme.entities.investmentRounds.InvestmentRound;
 import acme.entities.roles.Bookkeeper;
-import acme.entities.roles.Entrepreneur;
 import acme.entities.workProgrammes.WorkProgramme;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
-import acme.framework.entities.Principal;
 import acme.framework.services.AbstractShowService;
 
 @Service
@@ -28,20 +26,7 @@ public class BookkeeperInvestmentRoundShowService implements AbstractShowService
 	public boolean authorise(final Request<InvestmentRound> request) {
 		assert request != null;
 
-		boolean result;
-		int investmentRoundId;
-		InvestmentRound investmentRound;
-		Entrepreneur entrepreneur;
-		Principal principal;
-
-		investmentRoundId = request.getModel().getInteger("id");
-		investmentRound = this.repository.findOneInvestmentRoundById(investmentRoundId);
-		entrepreneur = investmentRound.getEntrepreneur();
-		principal = request.getPrincipal();
-		result = entrepreneur.getUserAccount().getId() == principal.getAccountId();
-
-		return result;
-
+		return true;
 	}
 
 	@Override
@@ -50,7 +35,7 @@ public class BookkeeperInvestmentRoundShowService implements AbstractShowService
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "ticker", "creationMoment", "round", "title", "description", "amountMoney", "moreInfo", "bookkeeper.identity.fullName");
+		request.unbind(entity, model, "ticker", "creationMoment", "round", "title", "description", "amountMoney", "moreInfo", "entrepreneur.identity.fullName");
 
 	}
 

@@ -23,6 +23,9 @@ public class BookkeeperInvestmentRoundController extends AbstractController<Book
 	private BookkeeperInvestmentRoundListMineService	listMineService;
 
 	@Autowired
+	private BookkeeperInvestmentRoundListNotMineService	listNotMineService;
+
+	@Autowired
 	private BookkeeperInvestmentRoundShowService		showService;
 
 
@@ -30,6 +33,7 @@ public class BookkeeperInvestmentRoundController extends AbstractController<Book
 	@PostConstruct
 	private void initialise() {
 		super.addCustomCommand(CustomCommand.LIST_MINE, BasicCommand.LIST, this.listMineService);
+		super.addCustomCommand(CustomCommand.LIST_NOT_MINE, BasicCommand.LIST, this.listNotMineService);
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
 
 	}

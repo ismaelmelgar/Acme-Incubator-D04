@@ -102,7 +102,8 @@ master.menu.investor.forum.listMine = My Forums
 master.menu.bookkeeper = Bookkeeper
 
 master.menu.bookkeeper.accountingRecord.listMine = My Accounting Records
-master.menu.bookkeeper.investmentRound.list = Investment Round
+master.menu.bookkeeper.investmentRound.listMine = My Investment Rounds
+master.menu.bookkeeper.investmentRound.listNotMine = Others Investment Rounds
 
 # master.menu.user-account ####################################################
 
