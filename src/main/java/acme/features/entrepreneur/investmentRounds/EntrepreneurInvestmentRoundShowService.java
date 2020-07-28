@@ -21,9 +21,8 @@ public class EntrepreneurInvestmentRoundShowService implements AbstractShowServi
 	@Autowired
 	EntrepreneurInvestmentRoundRepository repository;
 
+
 	// AbstractListService<Entrepreneur, InvestmentRound> interface ------------------------------
-
-
 	@Override
 	public boolean authorise(final Request<InvestmentRound> request) {
 		assert request != null;
@@ -41,6 +40,7 @@ public class EntrepreneurInvestmentRoundShowService implements AbstractShowServi
 		result = entrepreneur.getUserAccount().getId() == principal.getAccountId();
 
 		return result;
+
 	}
 
 	@Override

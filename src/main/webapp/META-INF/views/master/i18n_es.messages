@@ -88,12 +88,22 @@ master.menu.entrepreneur = Empresario
 
 master.menu.entrepreneur.investmentRound.listMine = Mis Rondas de Inversion
 master.menu.entrepreneur.application.listMine = Solicitudes a Mis Rondas de Inversion
+master.menu.entrepreneur.forum.listMine = Mis foros
 
 # master.menu.investor #########################################################
 
 master.menu.investor = Inversor
 
 master.menu.investor.application.listMine = Mis solicitudes
+master.menu.investor.forum.listMine = Mis foros
+
+# master.menu.bookkeeper #########################################################
+
+master.menu.bookkeeper = Bookkeeper
+
+master.menu.bookkeeper.accountingRecord.listMine = Registro de Contabilidad
+master.menu.bookkeeper.investmentRound.listMine = Mis rondas de inversiones
+master.menu.bookkeeper.investmentRound.listNotMine = Otras rondas de inversiones
 
 # master.menu.user-account ####################################################
 

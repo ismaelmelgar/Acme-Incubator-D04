@@ -102,18 +102,27 @@
 		<acme:menu-option code="master.menu.consumer" access="hasRole('Consumer')">
 			<acme:menu-suboption code="master.menu.consumer.favourite-link" action="http://www.example.com/" />
 		</acme:menu-option>
-		
+
 		<%--------------------Entrepreneur--------------------%>
 		<acme:menu-option code="master.menu.entrepreneur" access="hasRole('Entrepreneur')">
 			<acme:menu-suboption code="master.menu.entrepreneur.investmentRound.listMine" action="/entrepreneur/investment-round/list-mine" />
 			<acme:menu-suboption code="master.menu.entrepreneur.application.listMine" action="/entrepreneur/application/list-mine" />
+			<acme:menu-suboption code="master.menu.entrepreneur.forum.listMine" action="/entrepreneur/forum/list-mine" />
 		</acme:menu-option>
-	
+
 		<%--------------------Investor--------------------%>
 		<acme:menu-option code="master.menu.investor" access="hasRole('Investor')">
 			<acme:menu-suboption code="master.menu.investor.application.listMine" action="/investor/application/list-mine" />
+			<acme:menu-suboption code="master.menu.investor.forum.listMine" action="/investor/forum/list-mine" />
 		</acme:menu-option>
-		
+
+		<%--------------------Bookkeeper--------------------%>
+		<acme:menu-option code="master.menu.bookkeeper" access="hasRole('Bookkeeper')">
+			<acme:menu-suboption code="master.menu.bookkeeper.accountingRecord.listMine" action="/bookkeeper/accounting-record/list-mine" />
+			<acme:menu-suboption code="master.menu.bookkeeper.investmentRound.listMine" action="/bookkeeper/investment-round/list-mine" />
+			<acme:menu-suboption code="master.menu.bookkeeper.investmentRound.listNotMine" action="/bookkeeper/investment-round/list-not-mine" />
+		</acme:menu-option>
+
 	</acme:menu-left>
 
 	<acme:menu-right>

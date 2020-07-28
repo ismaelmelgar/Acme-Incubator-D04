@@ -18,7 +18,7 @@
 
 <acme:form readonly="true">
 	<acme:form-textbox code="entrepreneur.investmentRound.label.ticker" path="ticker"/>
-	<acme:form-textbox code="entrepreneur.investmentRound.label.creationMoment" path="creationMoment"/>
+	<acme:form-textbox code="entrepreneur.investmentRound.label.creation" path="creationMoment"/>
 	<acme:form-textbox code="entrepreneur.investmentRound.label.round" path="round"/>
 	<acme:form-textbox code="entrepreneur.investmentRound.label.title" path="title"/>
 	<acme:form-textarea code="entrepreneur.investmentRound.label.description" path="description"/>

@@ -272,7 +272,7 @@
 		<property name="sourceType" value="true" />
 		<property name="stars" value="-4" />
 	</bean>
-	
+
 	<!-- Entrepreneurs -->
 
 	<bean name="entrepreneur1UserAccount" class="acme.framework.entities.UserAccount">
@@ -305,7 +305,7 @@
 	<bean name="entrepreneur1Authenticated" class="acme.framework.entities.Authenticated">
 		<property name="userAccount" ref="entrepreneur1UserAccount" />
 	</bean>
-	
+
 	<bean name="entrepreneur2UserAccount" class="acme.framework.entities.UserAccount">
 		<property name="username" value="entrepreneur2" />
 		<property name="password" value="entrepreneur2" />
@@ -336,7 +336,7 @@
 	<bean name="entrepreneur2Authenticated" class="acme.framework.entities.Authenticated">
 		<property name="userAccount" ref="entrepreneur2UserAccount" />
 	</bean>
-	
+
 	<!-- Investors -->
 
 	<bean name="investor1UserAccount" class="acme.framework.entities.UserAccount">
@@ -368,7 +368,7 @@
 	<bean name="investor1Authenticated" class="acme.framework.entities.Authenticated">
 		<property name="userAccount" ref="investor1UserAccount" />
 	</bean>
-	
+
 	<bean name="investor2UserAccount" class="acme.framework.entities.UserAccount">
 		<property name="username" value="investor2" />
 		<property name="password" value="investor2" />
@@ -411,7 +411,7 @@
 		<property name="moreInfo" value="http://www.example.com" />
 		<property name="entrepreneur" ref="entrepreneur1Entrepreneur" />
 	</bean>
-	
+
 	<bean id="investmentRound02" class="acme.entities.investmentRounds.InvestmentRound">
 		<property name="ticker" value="TEC-20-000002" />
 		<property name="creationMoment" value="2018/11/07 12:24" />
@@ -422,9 +422,9 @@
 		<property name="moreInfo" value="http://www.example.com" />
 		<property name="entrepreneur" ref="entrepreneur2Entrepreneur" />
 	</bean>
-	
+
 	<!-- Work Programmes -->
-		
+
 	<bean id="workProgramme01" class="acme.entities.workProgrammes.WorkProgramme">
 		<property name="title" value="Titulo 1" />
 		<property name="start" value="2018/11/07 12:24" />
@@ -432,7 +432,7 @@
 		<property name="budget" value="50.0€" />
 		<property name="investmentRound" ref="investmentRound01" />
 	</bean>
-	
+
 	<bean id="workProgramme02" class="acme.entities.workProgrammes.WorkProgramme">
 		<property name="title" value="Titulo 2" />
 		<property name="start" value="2018/11/07 12:24" />
@@ -440,7 +440,7 @@
 		<property name="budget" value="25.0€" />
 		<property name="investmentRound" ref="investmentRound01" />
 	</bean>
-	
+
 	<bean id="workProgramme03" class="acme.entities.workProgrammes.WorkProgramme">
 		<property name="title" value="Titulo 3" />
 		<property name="start" value="2018/11/07 12:24" />
@@ -448,7 +448,7 @@
 		<property name="budget" value="75.0€" />
 		<property name="investmentRound" ref="investmentRound02" />
 	</bean>
-	
+
 	<!-- Applications -->
 
 	<bean id="application01" class="acme.entities.applications.Application">
@@ -459,7 +459,7 @@
 		<property name="investor" ref="investor1Investor" />
 		<property name="investmentRound" ref="investmentRound01" />
 	</bean>
-	
+
 	<bean id="application02" class="acme.entities.applications.Application">
 		<property name="ticker" value="NEG-20-000004" />
 		<property name="creationMoment" value="2018/11/07 12:24" />
@@ -468,5 +468,133 @@
 		<property name="investor" ref="investor2Investor" />
 		<property name="investmentRound" ref="investmentRound02" />
 	</bean>
-	
+
+	<!-- Forum -->
+
+	<bean name="forum01" class="acme.entities.forums.Forum">
+		<property name="title" value="Forum 1" />
+		<property name="investmentRound" ref="investmentRound02" />
+	</bean>
+
+	<bean name="forum02" class="acme.entities.forums.Forum">
+		<property name="title" value="Forum 2" />
+		<property name="investmentRound" ref="investmentRound01" />
+	</bean>
+
+	<!-- Messages -->
+
+	<bean name="message01" class="acme.entities.messages.Message">
+		<property name="title" value="Message 1" />
+		<property name="creation" value="2020/07/07 11:00" />
+		<property name="tags" value="tag1, tag2" />
+		<property name="body" value="Example of message." />
+		<property name="forum" ref="forum01" />
+	</bean>
+
+	<bean name="message02" class="acme.entities.messages.Message">
+		<property name="title" value="Message 2" />
+		<property name="creation" value="2020/07/10 12:00" />
+		<property name="tags" value="tag1, tag2" />
+		<property name="body" value="Example of message." />
+		<property name="forum" ref="forum01" />
+	</bean>
+
+	<bean name="message03" class="acme.entities.messages.Message">
+		<property name="title" value="Message 3" />
+		<property name="creation" value="2020/07/15 21:35" />
+		<property name="tags">
+			<null />
+		</property>
+		<property name="body" value="Example of message." />
+		<property name="forum" ref="forum02" />
+	</bean>
+
+	<bean name="message04" class="acme.entities.messages.Message">
+		<property name="title" value="Message 4" />
+		<property name="creation" value="2020/07/15 21:35" />
+		<property name="tags" value="tag2" />
+		<property name="body" value="Example of message." />
+		<property name="forum" ref="forum02" />
+	</bean>
+
+	<!-- Bookkeeper -->
+
+	<bean name="bookkeeper1UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="bookkeeper1" />
+		<property name="password" value="bookkeeper1" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Bookkeeper" />
+				<property name="surname" value="One" />
+				<property name="email" value="bookkeeper1@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="bookkeeper1Bookkeeper" />
+				<ref bean="bookkeeper1Authenticated" />
+			</list>
+		</property>
+	</bean>
+
+	<bean name="bookkeeper1Bookkeeper" class="acme.entities.roles.Bookkeeper">
+		<property name="name" value="Bookkeeper One" />
+		<property name="responsibilityStatement" value="Example" />
+		<property name="userAccount" ref="bookkeeper1UserAccount" />
+	</bean>
+
+	<bean name="bookkeeper1Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="bookkeeper1UserAccount" />
+	</bean>
+
+	<bean name="bookkeeper2UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="bookkeeper2" />
+		<property name="password" value="bookkeeper2" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Bookkeeper" />
+				<property name="surname" value="Two" />
+				<property name="email" value="bookkeeper2@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="bookkeeper2Bookkeeper" />
+				<ref bean="bookkeeper2Authenticated" />
+			</list>
+		</property>
+	</bean>
+
+	<bean name="bookkeeper2Bookkeeper" class="acme.entities.roles.Bookkeeper">
+		<property name="name" value="Bookkeeper Two" />
+		<property name="responsibilityStatement" value="Example" />
+		<property name="userAccount" ref="bookkeeper2UserAccount" />
+	</bean>
+
+	<bean name="bookkeeper2Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="bookkeeper2UserAccount" />
+	</bean>
+
+	<!-- Accounting Record -->
+
+	<bean name="accountingRecord01" class="acme.entities.accountingRecords.AccountingRecord">
+		<property name="title" value="AR 1" />
+		<property name="status" value="true" />
+		<property name="creation" value="2020/07/07 11:00" />
+		<property name="body" value="Example of accounting record." />
+		<property name="bookkeeper" ref="bookkeeper1Bookkeeper" />
+		<property name="investmentRound" ref="investmentRound01" />
+	</bean>
+
+	<bean name="accountingRecord02" class="acme.entities.accountingRecords.AccountingRecord">
+		<property name="title" value="AR 2" />
+		<property name="status" value="true" />
+		<property name="creation" value="2020/07/10 12:00" />
+		<property name="body" value="Example of accounting record." />
+		<property name="bookkeeper" ref="bookkeeper2Bookkeeper" />
+		<property name="investmentRound" ref="investmentRound02" />
+	</bean>
+
 </beans>
