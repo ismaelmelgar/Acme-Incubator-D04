@@ -543,21 +543,21 @@ bg=light_gray</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>1512</x>
-      <y>270</y>
+      <y>261</y>
       <w>180</w>
-      <h>63</h>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=&lt;-x
 m1=1
 m2=0..*
 published by</panel_attributes>
-    <additional_attributes>10.0;10.0;180.0;40.0</additional_attributes>
+    <additional_attributes>10.0;20.0;180.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1476</x>
-      <y>450</y>
+      <x>1503</x>
+      <y>612</y>
       <w>441</w>
       <h>108</h>
     </coordinates>
@@ -574,16 +574,16 @@ bg=light_gray</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1701</x>
+      <x>1782</x>
       <y>351</y>
       <w>81</w>
-      <h>117</h>
+      <h>279</h>
     </coordinates>
     <panel_attributes>lt=&lt;-x
 m1=1
 m2=0..*
 belong to</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;290.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
@@ -622,9 +622,9 @@ application for</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>972</x>
-      <y>585</y>
+      <y>612</y>
       <w>495</w>
-      <h>135</h>
+      <h>108</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 Accounting Record
@@ -633,39 +633,37 @@ Accounting Record
 + status: boolean {NotNull}¨
 + creation: Date {NotNull,Temporal(TemporalType.TIMESTAMP), Past}¨
 + body: String {NotBlank, Column(length = 500), Length(min = 1, max = 500)}
-+ investmentRound: InvestmentRound {NotNull,Valid,ManyToOne(optional = false)}
-+ bookkeeper: Bookkeeper {NotNull,Valid,ManyToOne(optional = false)}
 
-</panel_attributes>
+bg=light_gray</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>1116</x>
-      <y>423</y>
+      <y>414</y>
       <w>45</w>
-      <h>180</h>
+      <h>216</h>
     </coordinates>
     <panel_attributes>lt=&lt;-x
 m1=1
 m2=0..*
 role</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;180.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;220.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
       <x>990</x>
-      <y>342</y>
-      <w>252</w>
-      <h>90</h>
+      <y>351</y>
+      <w>549</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Role&gt;&gt;
 Bookkeeper
 --
-+ name: String {NotBlank}
-+ responsibilityStatement: String {NotBlank}</panel_attributes>
++ name: String {NotBlank, Column(length = 100), Length(min = 1, max = 100)}
++ responsibilityStatement: String {NotBlank, Column(length = 500), Length(min = 1, max = 500)}</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -674,10 +672,10 @@ Bookkeeper
       <x>828</x>
       <y>261</y>
       <w>189</w>
-      <h>99</h>
+      <h>108</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;190.0;90.0</additional_attributes>
+    <additional_attributes>10.0;10.0;190.0;100.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -699,13 +697,13 @@ m2=1
       <x>1962</x>
       <y>450</y>
       <w>441</w>
-      <h>72</h>
+      <h>63</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 Forum
 --
 + title: String {NotBlank, Column(length = 50), Length(min = 1, max = 50)}
-+ investmentRound: investmentRound {NotNull, Valid}
+
 bg=light_gray</panel_attributes>
     <additional_attributes/>
   </element>
@@ -713,23 +711,23 @@ bg=light_gray</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>2061</x>
-      <y>513</y>
+      <y>504</y>
       <w>81</w>
-      <h>108</h>
+      <h>126</h>
     </coordinates>
     <panel_attributes>lt=&lt;-x
 m1=1
 m2=0..*
 belong to</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
       <x>1962</x>
-      <y>603</y>
+      <y>612</y>
       <w>441</w>
-      <h>117</h>
+      <h>108</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 Message
@@ -738,8 +736,22 @@ Message
 + creation: Date {NotNull,Temporal(TemporalType.TIMESTAMP), Past}¨
 + tags: String {Column(length = 200), Length(max = 200)}
 + body: String {NotBlank, Column(length = 500), Length(min = 1, max = 500)}
-+ forum: Forum {NotNull,Valid,ManyToOne(optional = false)}
+
 bg=light_gray</panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1368</x>
+      <y>351</y>
+      <w>405</w>
+      <h>279</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-x
+m1=1
+m2=0..*
+belong to</panel_attributes>
+    <additional_attributes>420.0;10.0;420.0;180.0;10.0;180.0;10.0;290.0</additional_attributes>
   </element>
 </diagram>
