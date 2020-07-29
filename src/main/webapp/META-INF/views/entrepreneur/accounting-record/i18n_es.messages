@@ -13,7 +13,7 @@ entrepreneur.accounting-record.form.label.investmentRound = Ticker de la Ronda d
 entrepreneur.accounting-record.form.label.amountMoney = Cantidad económica
 entrepreneur.accounting-record.form.label.creation = Creación
 entrepreneur.accounting-record.form.label.bookkeeper = Bookeeper
-entrepreneur.accounting-record.form.label.status = Estado
+entrepreneur.accounting-record.form.label.status = Estado (La casilla marcada significa PUBLICADO, si no lo está, modo BORRADOR)
 
 entrepreneur.accounting-record.list.label.title = Titulo
 entrepreneur.accounting-record.list.label.creation = Creación
