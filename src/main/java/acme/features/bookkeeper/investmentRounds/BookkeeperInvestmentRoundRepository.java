@@ -25,7 +25,9 @@ public interface BookkeeperInvestmentRoundRepository extends AbstractRepository 
 	@Query("select wp from WorkProgramme wp join wp.investmentRound ir where ir.id = ?1")
 	Collection<WorkProgramme> findWorkProgrammeByInvestmentRoundId(int id);
 
-	//	@Query("select ir from InvestmentRound ir where ir not in (select ar.investmentRound from AccountingRecord ar where ar.bookkeeper.id = ?1)  and ir.status=1 ")
 	@Query("select i from InvestmentRound i where i not in (select ar.investmentRound from AccountingRecord ar where ar.bookkeeper.id = ?1) ")
 	Collection<InvestmentRound> findManyByNonBookkeeperId(int bookkeeperId);
+
+	@Query("select count(ar) from AccountingRecord ar where ar.investmentRound.id = ?1")
+	int findAccountingRecordByInvestmentRoundId(int investmentRoundId);
 }
