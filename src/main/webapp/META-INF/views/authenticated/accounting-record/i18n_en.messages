@@ -13,7 +13,7 @@ authenticated.accounting-record.form.label.investmentRound = Investment Record T
 authenticated.accounting-record.form.label.moneyOffer = Money Offer
 authenticated.accounting-record.form.label.creation = Creation
 authenticated.accounting-record.form.label.bookkeeper = Bookkeeper
-authenticated.accounting-record.form.label.status = Status
+authenticated.accounting-record.form.label.status = Status (Marked means it's published, if not, it's in draft mode)
 
 authenticated.accounting-record.list.label.title = Title
 authenticated.accounting-record.list.label.creation = Creation
