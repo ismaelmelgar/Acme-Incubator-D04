@@ -1,0 +1,21 @@
+# i18n_en.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+entrepreneur.accounting-record.form.label.title = Title	
+entrepreneur.accounting-record.form.label.investmentRound = Investment Record Ticker
+entrepreneur.accounting-record.form.label.moneyOffer = Money Offer
+entrepreneur.accounting-record.form.label.creation = Creation
+entrepreneur.accounting-record.form.label.bookkeeper = Bookkeeper
+entrepreneur.accounting-record.form.label.status = Status
+
+entrepreneur.accounting-record.list.label.title = Title
+entrepreneur.accounting-record.list.label.creation = Creation
+
+entrepreneur.accounting-record.form.button.return = Return

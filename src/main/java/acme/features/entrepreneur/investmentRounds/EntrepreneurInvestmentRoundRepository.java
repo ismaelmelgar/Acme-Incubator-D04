@@ -24,4 +24,7 @@ public interface EntrepreneurInvestmentRoundRepository extends AbstractRepositor
 
 	@Query("select wp from WorkProgramme wp join wp.investmentRound ir where ir.id = ?1")
 	Collection<WorkProgramme> findWorkProgrammeByInvestmentRoundId(int id);
+
+	@Query("select count(ar) from AccountingRecord ar where ar.investmentRound.id = ?1")
+	int findAccountingRecordByInvestmentRoundId(int investmentRoundId);
 }

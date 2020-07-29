@@ -17,16 +17,18 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:form readonly="true">
-	<acme:form-textbox code="entrepreneur.investmentRound.label.ticker" path="ticker"/>
-	<acme:form-textbox code="entrepreneur.investmentRound.label.creation" path="creationMoment"/>
-	<acme:form-textbox code="entrepreneur.investmentRound.label.round" path="round"/>
-	<acme:form-textbox code="entrepreneur.investmentRound.label.title" path="title"/>
-	<acme:form-textarea code="entrepreneur.investmentRound.label.description" path="description"/>
-	<acme:form-textbox code="entrepreneur.investmentRound.label.amountMoney" path="amountMoney"/>
-	<acme:form-textbox code="entrepreneur.investmentRound.label.moreInfo" path="moreInfo"/>
-	<acme:form-textbox code="entrepreneur.investmentRound.label.entrepreneur" path="entrepreneur.identity.fullName"/>
-	
-	<acme:form-submit code="entrepreneur.investmentRound.form.button.workProgramme" action="/entrepreneur/work-programme/list?investmentRoundId=${id}"  method="get"/>
-	
-	<acme:form-return code="entrepreneur.investmentRound.button.return"/>
+	<acme:form-textbox code="entrepreneur.investmentRound.label.ticker" path="ticker" />
+	<acme:form-textbox code="entrepreneur.investmentRound.label.creation" path="creationMoment" />
+	<acme:form-textbox code="entrepreneur.investmentRound.label.round" path="round" />
+	<acme:form-textbox code="entrepreneur.investmentRound.label.title" path="title" />
+	<acme:form-textarea code="entrepreneur.investmentRound.label.description" path="description" />
+	<acme:form-textbox code="entrepreneur.investmentRound.label.amountMoney" path="amountMoney" />
+	<acme:form-textbox code="entrepreneur.investmentRound.label.moreInfo" path="moreInfo" />
+	<acme:form-textbox code="entrepreneur.investmentRound.label.entrepreneur" path="entrepreneur.identity.fullName" />
+
+	<acme:form-submit code="entrepreneur.investmentRound.form.button.workProgramme"
+		action="/entrepreneur/work-programme/list?investmentRoundId=${id}" method="get" />
+	<acme:form-submit test="${numAR > 0}" code="entrepreneur.investmentRound.form.button.accountingRecord"
+		action="/authenticated/accounting-record/list-mine?investmentRoundid=${id}" method="get" />
+	<acme:form-return code="entrepreneur.investmentRound.button.return" />
 </acme:form>

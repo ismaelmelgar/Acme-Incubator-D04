@@ -36,6 +36,10 @@ public class AuthenticatedInvestmentRoundShowService implements AbstractShowServ
 		assert entity != null;
 		assert model != null;
 
+		int id = request.getModel().getInteger("id");
+		int numAR = this.repository.findAccountingRecordByInvestmentRoundId(id);
+		model.setAttribute("numAR", numAR);
+
 		request.unbind(entity, model, "ticker", "creationMoment", "round", "title", "description", "amountMoney", "moreInfo", "entrepreneur.identity.fullName");
 
 	}
