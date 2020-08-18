@@ -12,6 +12,7 @@ entrepreneur.accounting-record.form.label.title = Title
 entrepreneur.accounting-record.form.label.investmentRound = Investment Record Ticker
 entrepreneur.accounting-record.form.label.moneyOffer = Money Offer
 entrepreneur.accounting-record.form.label.creation = Creation
+entrepreneur.accounting-record.form.label.body = Body
 entrepreneur.accounting-record.form.label.bookkeeper = Bookkeeper
 entrepreneur.accounting-record.form.label.status = Status (Marked means it's published, if not, it's in draft mode)
 

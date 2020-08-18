@@ -12,6 +12,7 @@ authenticated.accounting-record.form.label.title = Titulo
 authenticated.accounting-record.form.label.investmentRound = Ticker de la Ronda de Inversiones
 authenticated.accounting-record.form.label.amountMoney = Cantidad económica
 authenticated.accounting-record.form.label.creation = Creación
+authenticated.accounting-record.form.label.body = Cuerpo
 authenticated.accounting-record.form.label.bookkeeper = Bookeeper
 authenticated.accounting-record.form.label.status = Estado (Si la casilla está marcada, significa publicado, si no lo está, modo borrador)
 

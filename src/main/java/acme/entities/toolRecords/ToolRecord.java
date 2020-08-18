@@ -4,7 +4,6 @@ package acme.entities.toolRecords;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.validation.constraints.Email;
-import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.Range;
@@ -46,8 +45,7 @@ public class ToolRecord extends DomainEntity {
 	@Email
 	private String				email;
 
-	@NotNull
-	private boolean				sourceType;
+	private Boolean				sourceType;
 
 	@Range(min = -5, max = 5)
 	private Integer				stars;

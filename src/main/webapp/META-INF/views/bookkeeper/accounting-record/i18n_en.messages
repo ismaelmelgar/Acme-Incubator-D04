@@ -12,6 +12,7 @@ bookkeeper.accounting-record.form.label.title = Title
 bookkeeper.accounting-record.form.label.investmentRound = Investment Record Ticker
 bookkeeper.accounting-record.form.label.moneyOffer = Money Offer
 bookkeeper.accounting-record.form.label.creation = Creation
+bookkeeper.accounting-record.form.label.body = Body
 bookkeeper.accounting-record.form.label.bookkeeper = Bookkeeper
 bookkeeper.accounting-record.form.label.status = Status (Marked means it's published, if not, it's in draft mode)
 

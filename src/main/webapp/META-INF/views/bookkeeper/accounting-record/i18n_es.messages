@@ -12,6 +12,7 @@ bookkeeper.accounting-record.form.label.title = Titulo
 bookkeeper.accounting-record.form.label.investmentRound = Ticker de la Ronda de Inversiones
 bookkeeper.accounting-record.form.label.amountMoney = Cantidad económica
 bookkeeper.accounting-record.form.label.creation = Creación
+bookkeeper.accounting-record.form.label.body = Cuerpo
 bookkeeper.accounting-record.form.label.bookkeeper = Bookeeper
 bookkeeper.accounting-record.form.label.status = Estado (Si la casilla está marcada, significa publicado, si no lo está, modo borrador)
 

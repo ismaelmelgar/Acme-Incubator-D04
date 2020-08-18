@@ -16,8 +16,12 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:form readonly="true">
+
+	<acme:form-hidden path="investmentRoundId"/>
+	
 	<acme:form-textbox code="bookkeeper.accounting-record.form.label.title" path="title"/>
 	<acme:form-moment code="bookkeeper.accounting-record.form.label.creation" path="creation"/>
+		<acme:form-moment code="bookkeeper.accounting-record.form.label.body" path="body"/>
 	<acme:form-textbox code="bookkeeper.accounting-record.form.label.investmentRound" path="investmentRound.ticker"/>
 	<acme:form-textbox code="bookkeeper.accounting-record.form.label.bookkeeper" path="bookkeeper.identity.fullName"/>
 	<acme:form-checkbox code="bookkeeper.accounting-record.form.label.status" path="status"/>

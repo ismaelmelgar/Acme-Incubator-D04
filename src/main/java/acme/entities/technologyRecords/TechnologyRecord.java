@@ -5,7 +5,6 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.Range;
@@ -58,7 +57,6 @@ public class TechnologyRecord extends DomainEntity {
 	@NotBlank
 	private String				email;
 
-	@NotNull
 	private Boolean				indication;
 
 	@Range(min = -5, max = 5)

@@ -33,7 +33,7 @@ public class AuthenticatedAccountingRecordShowService implements AbstractShowSer
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "status", "creation", "bookkeeper.identity.fullName", "investmentRound.ticker");
+		request.unbind(entity, model, "title", "status", "creation", "body", "bookkeeper.identity.fullName", "investmentRound.ticker");
 	}
 
 	@Override

@@ -13,7 +13,7 @@ import acme.framework.entities.Authenticated;
 import acme.framework.services.AbstractListService;
 
 @Service
-public class AuthenticatedAccountingRecordListMineService implements AbstractListService<Authenticated, AccountingRecord> {
+public class AuthenticatedAccountingRecordListService implements AbstractListService<Authenticated, AccountingRecord> {
 
 	// Internal state ------------------------------------------------------------------
 

@@ -422,6 +422,17 @@
 		<property name="moreInfo" value="http://www.example.com" />
 		<property name="entrepreneur" ref="entrepreneur2Entrepreneur" />
 	</bean>
+	
+	<bean id="investmentRound03" class="acme.entities.investmentRounds.InvestmentRound">
+		<property name="ticker" value="HEA-20-000003" />
+		<property name="creationMoment" value="2018/11/07 10:24" />
+		<property name="round" value="SEED" />
+		<property name="title" value="Titulo 3" />
+		<property name="description" value="Descripicion numero tres" />
+		<property name="amountMoney" value="200.0€" />
+		<property name="moreInfo" value="http://www.example.com" />
+		<property name="entrepreneur" ref="entrepreneur1Entrepreneur" />
+	</bean>
 
 	<!-- Work Programmes -->
 
@@ -595,6 +606,15 @@
 		<property name="body" value="Example of accounting record." />
 		<property name="bookkeeper" ref="bookkeeper2Bookkeeper" />
 		<property name="investmentRound" ref="investmentRound02" />
+	</bean>
+	
+	<bean name="accountingRecord03" class="acme.entities.accountingRecords.AccountingRecord">
+		<property name="title" value="AR 3" />
+		<property name="status" value="true" />
+		<property name="creation" value="2020/07/07 12:00" />
+		<property name="body" value="Example of accounting record." />
+		<property name="bookkeeper" ref="bookkeeper1Bookkeeper" />
+		<property name="investmentRound" ref="investmentRound03" />
 	</bean>
 
 </beans>

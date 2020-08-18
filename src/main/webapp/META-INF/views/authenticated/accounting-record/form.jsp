@@ -18,6 +18,7 @@
 <acme:form readonly="true">
 	<acme:form-textbox code="authenticated.accounting-record.form.label.title" path="title"/>
 	<acme:form-moment code="authenticated.accounting-record.form.label.creation" path="creation"/>
+	<acme:form-moment code="authenticated.accounting-record.form.label.body" path="body"/>
 	<acme:form-textbox code="authenticated.accounting-record.form.label.investmentRound" path="investmentRound.ticker"/>
 	<acme:form-textbox code="authenticated.accounting-record.form.label.bookkeeper" path="bookkeeper.identity.fullName"/>
 	<acme:form-checkbox code="authenticated.accounting-record.form.label.status" path="status"/>
