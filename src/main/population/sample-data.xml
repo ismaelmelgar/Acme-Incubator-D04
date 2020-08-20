@@ -422,7 +422,7 @@
 		<property name="moreInfo" value="http://www.example.com" />
 		<property name="entrepreneur" ref="entrepreneur2Entrepreneur" />
 	</bean>
-	
+
 	<bean id="investmentRound03" class="acme.entities.investmentRounds.InvestmentRound">
 		<property name="ticker" value="HEA-20-000003" />
 		<property name="creationMoment" value="2018/11/07 10:24" />
@@ -485,11 +485,13 @@
 	<bean name="forum01" class="acme.entities.forums.Forum">
 		<property name="title" value="Forum 1" />
 		<property name="investmentRound" ref="investmentRound02" />
+		<property name="authenticated" ref="entrepreneur1Authenticated" />
 	</bean>
 
 	<bean name="forum02" class="acme.entities.forums.Forum">
 		<property name="title" value="Forum 2" />
 		<property name="investmentRound" ref="investmentRound01" />
+		<property name="authenticated" ref="entrepreneur2Authenticated" />
 	</bean>
 
 	<!-- Messages -->
@@ -607,7 +609,7 @@
 		<property name="bookkeeper" ref="bookkeeper2Bookkeeper" />
 		<property name="investmentRound" ref="investmentRound02" />
 	</bean>
-	
+
 	<bean name="accountingRecord03" class="acme.entities.accountingRecords.AccountingRecord">
 		<property name="title" value="AR 3" />
 		<property name="status" value="true" />

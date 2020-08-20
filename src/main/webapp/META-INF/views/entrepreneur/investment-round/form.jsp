@@ -26,6 +26,8 @@
 	<acme:form-textbox code="entrepreneur.investmentRound.label.moreInfo" path="moreInfo" />
 	<acme:form-textbox code="entrepreneur.investmentRound.label.entrepreneur" path="entrepreneur.identity.fullName" />
 
+	<acme:form-submit code="entrepreneur.investmentRound.form.button.forum" action="/entrepreneur/forum/show?id=${forumId}"
+		method="get" />
 	<acme:form-submit code="entrepreneur.investmentRound.form.button.workProgramme"
 		action="/entrepreneur/work-programme/list?investmentRoundId=${id}" method="get" />
 	<acme:form-submit test="${numAR > 0}" code="entrepreneur.investmentRound.form.button.accountingRecord"

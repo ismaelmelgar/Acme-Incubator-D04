@@ -10,23 +10,26 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.features.entrepreneur.forum;
+package acme.features.authenticated.message;
 
 import java.util.Collection;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import acme.entities.forums.Forum;
+import acme.entities.messages.Message;
 import acme.framework.repositories.AbstractRepository;
 
 @Repository
-public interface EntrepreneurForumRepository extends AbstractRepository {
+public interface AuthenticatedMessageRepository extends AbstractRepository {
 
-	@Query("select f from Forum f where f.id = ?1")
-	Forum findOneById(int id);
+	@Query("select m from Message m where m.id = ?1")
+	Message findOneById(int id);
 
-	@Query("select f from Forum f where f.investmentRound.entrepreneur.id = ?1")
-	Collection<Forum> findMany(int id);
+	@Query("select m from Message m where m.id = ?1")
+	Message findForumByMessageId(int id);
+
+	@Query("select m from Message m where m.forum.id = ?1")
+	Collection<Message> findMany(int id);
 
 }

@@ -1,5 +1,5 @@
 /*
- * AuthenticatedProviderController.java
+ * EntrepreneurProviderController.java
  *
  * Copyright (c) 2019 Rafael Corchuelo.
  *
@@ -10,7 +10,7 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.features.investor.forum;
+package acme.features.authenticated.message;
 
 import javax.annotation.PostConstruct;
 
@@ -19,25 +19,25 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import acme.components.CustomCommand;
-import acme.entities.forums.Forum;
-import acme.entities.roles.Investor;
+import acme.entities.messages.Message;
 import acme.framework.components.BasicCommand;
 import acme.framework.controllers.AbstractController;
+import acme.framework.entities.Authenticated;
 
 @Controller
-@RequestMapping("/investor/forum/")
-public class InvestorForumController extends AbstractController<Investor, Forum> {
+@RequestMapping("/authenticated/message/")
+public class AuthenticatedMessageController extends AbstractController<Authenticated, Message> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	private InvestorForumListMineService	listMineService;
+	private AuthenticatedMessageListMineService	listMineService;
 
 	@Autowired
-	private InvestorForumShowService		showService;
-
+	private AuthenticatedMessageShowService		showService;
 
 	// Constructors -----------------------------------------------------------
+
 
 	@PostConstruct
 	private void initialise() {

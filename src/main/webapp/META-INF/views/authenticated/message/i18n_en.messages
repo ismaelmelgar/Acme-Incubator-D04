@@ -8,11 +8,12 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-investor.forum.form.label.title = Title	
-investor.forum.form.label.ticker = Investment Round Ticker
+authenticated.message.form.label.title = Title	
+authenticated.message.form.label.creation = Creation
+authenticated.message.form.label.tags = Tags
+authenticated.message.form.label.body = Body
 
-investor.forum.list.label.title = Title
-investor.forum.list.label.ticker = Investment Round Ticker
+authenticated.message.list.label.title = Title
+authenticated.message.list.label.creation = Creation
 
-investor.forum.form.buttom.message = Messages
-investor.forum.form.button.return = Return
+authenticated.message.form.button.return = Return

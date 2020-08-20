@@ -6,6 +6,7 @@ import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.forums.Forum;
 import acme.entities.investmentRounds.InvestmentRound;
 import acme.entities.roles.Entrepreneur;
 import acme.entities.workProgrammes.WorkProgramme;
@@ -52,6 +53,8 @@ public class EntrepreneurInvestmentRoundShowService implements AbstractShowServi
 		int id = request.getModel().getInteger("id");
 		int numAR = this.repository.findAccountingRecordByInvestmentRoundId(id);
 		model.setAttribute("numAR", numAR);
+		Forum forum = this.repository.findForumByInvestmentRoundId(id);
+		model.setAttribute("forumId", forum.getId());
 
 		request.unbind(entity, model, "ticker", "creationMoment", "round", "title", "description", "amountMoney", "moreInfo", "entrepreneur.identity.fullName");
 

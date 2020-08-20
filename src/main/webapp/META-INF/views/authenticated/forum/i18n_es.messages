@@ -8,11 +8,11 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-entrepreneur.forum.form.label.title = Titulo
-entrepreneur.forum.form.label.ticker = Ticker de la Ronda de Inversion
+authenticated.forum.form.label.title = Titulo
+authenticated.forum.form.label.ticker = Ticker de la Ronda de Inversion
 
-entrepreneur.forum.list.label.title = Titulo
-entrepreneur.forum.list.label.ticker = Ticker de la Ronda de Inversion
+authenticated.forum.list.label.title = Titulo
+authenticated.forum.list.label.ticker = Ticker de la Ronda de Inversion
 
-entrepreneur.forum.form.buttom.message = Mensajes
-entrepreneur.forum.form.button.return= Volver
+authenticated.forum.form.buttom.message = Mensajes
+authenticated.forum.form.button.return= Volver

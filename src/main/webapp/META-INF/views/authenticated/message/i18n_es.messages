@@ -1,3 +1,4 @@
+  
 # i18n_es.messages
 #
 # Copyright (c) 2019 Rafael Corchuelo.
@@ -8,12 +9,12 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-investor.message.form.label.title = Titulo
-investor.message.form.label.creation = Creacion
-investor.message.form.label.tags = Tags
-investor.message.form.label.body = Cuerpo
+authenticated.message.form.label.title = Titulo
+authenticated.message.form.label.creation = Creacion
+authenticated.message.form.label.tags = Tags
+authenticated.message.form.label.body = Cuerpo
 
-investor.message.list.label.title = Titulo
-investor.message.list.label.creation = Creacion
+authenticated.message.list.label.title = Titulo
+authenticated.message.list.label.creation = Creacion
 
-investor.message.form.button.return = Volver
+authenticated.message.form.button.return = Volver

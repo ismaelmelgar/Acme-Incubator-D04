@@ -1,32 +1,47 @@
 
-package acme.features.entrepreneur.message;
+package acme.features.authenticated.message;
 
 import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import acme.entities.messages.Message;
-import acme.entities.roles.Entrepreneur;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
+import acme.framework.entities.Authenticated;
 import acme.framework.services.AbstractListService;
 
 @Service
-public class EntrepreneurMessageListMineService implements AbstractListService<Entrepreneur, Message> {
+public class AuthenticatedMessageListMineService implements AbstractListService<Authenticated, Message> {
 
 	// Internal state ------------------------------------------------------------------
 
 	@Autowired
-	EntrepreneurMessageRepository repository;
+	AuthenticatedMessageRepository repository;
 
 
-	// AbstractListService<Entrepreneur, Message> interface ------------------------------
+	// AbstractListService<Authenticated, Message> interface ------------------------------
 	@Override
+	@RequestMapping(value = "list-mine?forumid={}", method = RequestMethod.GET)
 	public boolean authorise(final Request<Message> request) {
 		assert request != null;
+		boolean result;
 
-		return true;
+		int messageId;
+		Message message;
+		int principalId;
+		int mAuId;
+
+		messageId = request.getModel().getInteger("id");
+		message = this.repository.findOneById(messageId);
+		mAuId = message.getForum().getAuthenticated().getUserAccount().getId();
+		principalId = request.getPrincipal().getAccountId();
+		result = mAuId == principalId;
+
+		return result;
 	}
 
 	@Override

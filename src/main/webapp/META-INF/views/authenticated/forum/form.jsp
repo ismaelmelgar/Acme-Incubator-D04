@@ -16,9 +16,9 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:form readonly="true">
-	<acme:form-textbox code="entrepreneur.forum.form.label.title" path="title"/>
-	<acme:form-textbox code="entrepreneur.forum.form.label.ticker" path="investmentRound.ticker"/>
+	<acme:form-textbox code="authenticated.forum.form.label.title" path="title"/>
+	<acme:form-textbox code="authenticated.forum.form.label.ticker" path="investmentRound.ticker"/>
 
-	<acme:form-submit code="entrepreneur.forum.form.buttom.message" action="/entrepreneur/message/list-mine?forumid=${id}"  method="get"/>
-	<acme:form-return code="entrepreneur.forum.form.button.return"/>
+	<acme:form-submit code="authenticated.forum.form.buttom.message" action="/authenticated/message/list-mine?forumid=${id}"  method="get"/>
+	<acme:form-return code="authenticated.forum.form.button.return"/>
 </acme:form>
