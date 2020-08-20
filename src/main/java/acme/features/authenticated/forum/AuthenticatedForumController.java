@@ -10,7 +10,7 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.features.entrepreneur.message;
+package acme.features.authenticated.forum;
 
 import javax.annotation.PostConstruct;
 
@@ -19,25 +19,25 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import acme.components.CustomCommand;
-import acme.entities.messages.Message;
-import acme.entities.roles.Entrepreneur;
+import acme.entities.forums.Forum;
 import acme.framework.components.BasicCommand;
 import acme.framework.controllers.AbstractController;
+import acme.framework.entities.Authenticated;
 
 @Controller
-@RequestMapping("/entrepreneur/message/")
-public class EntrepreneurMessageController extends AbstractController<Entrepreneur, Message> {
+@RequestMapping("/authenticated/forum/")
+public class AuthenticatedForumController extends AbstractController<Authenticated, Forum> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	private EntrepreneurMessageListMineService	listMineService;
+	private AuthenticatedForumListMineService	listMineService;
 
 	@Autowired
-	private EntrepreneurMessageShowService		showService;
-
+	private AuthenticatedForumShowService		showService;
 
 	// Constructors -----------------------------------------------------------
+
 
 	@PostConstruct
 	private void initialise() {

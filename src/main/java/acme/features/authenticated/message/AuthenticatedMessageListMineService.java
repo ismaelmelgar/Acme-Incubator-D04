@@ -1,32 +1,48 @@
 
-package acme.features.entrepreneur.message;
+package acme.features.authenticated.message;
 
 import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.forums.Forum;
 import acme.entities.messages.Message;
-import acme.entities.roles.Entrepreneur;
+import acme.features.authenticated.forum.AuthenticatedForumRepository;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
+import acme.framework.entities.Authenticated;
 import acme.framework.services.AbstractListService;
 
 @Service
-public class EntrepreneurMessageListMineService implements AbstractListService<Entrepreneur, Message> {
+public class AuthenticatedMessageListMineService implements AbstractListService<Authenticated, Message> {
 
 	// Internal state ------------------------------------------------------------------
 
 	@Autowired
-	EntrepreneurMessageRepository repository;
+	AuthenticatedMessageRepository	repository;
+
+	AuthenticatedForumRepository	forumRepository;
 
 
-	// AbstractListService<Entrepreneur, Message> interface ------------------------------
+	// AbstractListService<Authenticated, Message> interface ------------------------------
 	@Override
 	public boolean authorise(final Request<Message> request) {
 		assert request != null;
+		boolean result;
 
-		return true;
+		int forumId;
+		Forum forum;
+		int principalId;
+		int fAuId;
+
+		forumId = request.getModel().getInteger("forumid");
+		forum = this.repository.findByForumId(forumId);
+		fAuId = forum.getAuthenticated().getUserAccount().getId();
+		principalId = request.getPrincipal().getAccountId();
+		result = fAuId == principalId;
+
+		return result;
 	}
 
 	@Override
@@ -36,7 +52,6 @@ public class EntrepreneurMessageListMineService implements AbstractListService<E
 		assert model != null;
 
 		request.unbind(entity, model, "title", "creation");
-
 	}
 
 	@Override

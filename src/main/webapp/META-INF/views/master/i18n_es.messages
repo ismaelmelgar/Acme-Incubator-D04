@@ -54,6 +54,8 @@ master.menu.authenticated = Autenticado
 
 master.menu.authenticated.investmentRound.list = Rondas de Inversion
 
+master.menu.authenticated.forum.listMine = Mis foros
+
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrador

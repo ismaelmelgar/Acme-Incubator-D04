@@ -16,7 +16,7 @@ master.banner.background = #FFE97F
 
 master.welcome.title = Welcome!
 master.welcome.text = \
-	Welcome to Acme Incubator! Never before has it bee easier to get your \
+	Welcome to Acme Incubator! Never before has it been easier to get your \
 	project up and running!
 
 # master.menu #################################################################
@@ -52,6 +52,8 @@ master.menu.bulletin.dos.minuesaBulletin.form = Shout to Minuesa!
 master.menu.authenticated = Authenticated
 
 master.menu.authenticated.investmentRound.list = Investment Rounds
+
+master.menu.authenticated.forum.listMine = My Forums
 
 # master.menu.administrator ###################################################
 

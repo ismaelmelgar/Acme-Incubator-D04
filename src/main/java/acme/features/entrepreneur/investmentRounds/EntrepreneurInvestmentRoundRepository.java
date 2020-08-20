@@ -6,6 +6,7 @@ import java.util.Collection;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
+import acme.entities.forums.Forum;
 import acme.entities.investmentRounds.InvestmentRound;
 import acme.entities.workProgrammes.WorkProgramme;
 import acme.framework.repositories.AbstractRepository;
@@ -27,4 +28,8 @@ public interface EntrepreneurInvestmentRoundRepository extends AbstractRepositor
 
 	@Query("select count(ar) from AccountingRecord ar where ar.investmentRound.id = ?1")
 	int findAccountingRecordByInvestmentRoundId(int investmentRoundId);
+
+	@Query("select f from Forum f where f.investmentRound.id = ?1")
+	Forum findForumByInvestmentRoundId(int id);
+
 }

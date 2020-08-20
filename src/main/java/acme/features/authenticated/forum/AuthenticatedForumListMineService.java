@@ -1,5 +1,5 @@
 
-package acme.features.investor.forum;
+package acme.features.authenticated.forum;
 
 import java.util.Collection;
 
@@ -7,22 +7,22 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.forums.Forum;
-import acme.entities.roles.Investor;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
+import acme.framework.entities.Authenticated;
 import acme.framework.entities.Principal;
 import acme.framework.services.AbstractListService;
 
 @Service
-public class InvestorForumListMineService implements AbstractListService<Investor, Forum> {
+public class AuthenticatedForumListMineService implements AbstractListService<Authenticated, Forum> {
 
 	// Internal state ------------------------------------------------------------------
 
 	@Autowired
-	InvestorForumRepository repository;
+	AuthenticatedForumRepository repository;
 
 
-	// AbstractListService<Investor, Forum> interface ------------------------------
+	// AbstractListService<Authenticated, Forum> interface ------------------------------
 	@Override
 	public boolean authorise(final Request<Forum> request) {
 		assert request != null;
@@ -47,7 +47,7 @@ public class InvestorForumListMineService implements AbstractListService<Investo
 		Collection<Forum> result;
 		Principal principal = request.getPrincipal();
 
-		result = this.repository.findMany(principal.getActiveRoleId());
+		result = this.repository.findMany(principal.getAccountId());
 
 		return result;
 	}
