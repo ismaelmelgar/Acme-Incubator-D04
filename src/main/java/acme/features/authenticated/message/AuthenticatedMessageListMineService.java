@@ -5,10 +5,10 @@ import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 
+import acme.entities.forums.Forum;
 import acme.entities.messages.Message;
+import acme.features.authenticated.forum.AuthenticatedForumRepository;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Authenticated;
@@ -20,26 +20,27 @@ public class AuthenticatedMessageListMineService implements AbstractListService<
 	// Internal state ------------------------------------------------------------------
 
 	@Autowired
-	AuthenticatedMessageRepository repository;
+	AuthenticatedMessageRepository	repository;
+
+	AuthenticatedForumRepository	forumRepository;
 
 
 	// AbstractListService<Authenticated, Message> interface ------------------------------
 	@Override
-	@RequestMapping(value = "list-mine?forumid={}", method = RequestMethod.GET)
 	public boolean authorise(final Request<Message> request) {
 		assert request != null;
 		boolean result;
 
-		int messageId;
-		Message message;
+		int forumId;
+		Forum forum;
 		int principalId;
-		int mAuId;
+		int fAuId;
 
-		messageId = request.getModel().getInteger("id");
-		message = this.repository.findOneById(messageId);
-		mAuId = message.getForum().getAuthenticated().getUserAccount().getId();
+		forumId = request.getModel().getInteger("forumid");
+		forum = this.repository.findByForumId(forumId);
+		fAuId = forum.getAuthenticated().getUserAccount().getId();
 		principalId = request.getPrincipal().getAccountId();
-		result = mAuId == principalId;
+		result = fAuId == principalId;
 
 		return result;
 	}
@@ -51,7 +52,6 @@ public class AuthenticatedMessageListMineService implements AbstractListService<
 		assert model != null;
 
 		request.unbind(entity, model, "title", "creation");
-
 	}
 
 	@Override

@@ -35,7 +35,7 @@ public class BookkeeperInvestmentRoundListMineService implements AbstractListSer
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "description");
+		request.unbind(entity, model, "title", "description", "entrepreneur.identity.fullName");
 
 	}
 

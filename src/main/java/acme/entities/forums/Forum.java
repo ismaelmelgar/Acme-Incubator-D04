@@ -35,12 +35,12 @@ public class Forum extends DomainEntity {
 
 	@NotNull
 	@Valid
-	@OneToOne
-	private InvestmentRound		investmentRound;
+	@ManyToOne(optional = false)
+	private Authenticated		authenticated;
 
 	@NotNull
 	@Valid
-	@ManyToOne(optional = false)
-	private Authenticated		authenticated;
+	@OneToOne
+	private InvestmentRound		investmentRound;
 
 }
