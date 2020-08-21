@@ -91,6 +91,14 @@
 			<acme:menu-separator />
 			<acme:menu-suboption code="master.menu.administrator.technologyRecords.list" action="/administrator/technology-record/list" />
 			<acme:menu-suboption code="master.menu.administrator.technologyRecords.create" action="/administrator/technology-record/create" />
+			<!--  Tool Record -->
+			<acme:menu-separator />
+			<acme:menu-suboption code="master.menu.administrator.toolRecords.list" action="/administrator/tool-record/list" />
+			<acme:menu-suboption code="master.menu.administrator.toolRecords.create" action="/administrator/tool-record/create" />
+			<!--  Overture -->
+			<acme:menu-separator />
+			<acme:menu-suboption code="master.menu.administrator.overtures.list" action="/administrator/overture/list" />
+			<acme:menu-suboption code="master.menu.administrator.overtures.create" action="/administrator/overture/create" />
 			<!--  Shutdown -->
 			<acme:menu-separator />
 			<acme:menu-suboption code="master.menu.administrator.shutdown" action="/master/shutdown" />

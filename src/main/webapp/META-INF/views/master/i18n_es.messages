@@ -63,16 +63,22 @@ master.menu.administrator.user-accounts = Cuentas de usuario
 master.menu.administrator.shutdown = Parar el sistema
 master.menu.customisation.list = Configuracion
 
-master.menu.administrator.notices.create = Crear aviso
+master.menu.administrator.notices.create = Crear noticias
 
 master.menu.administrator.inquiries.list = Consultas
 master.menu.administrator.inquiries.create = Crear consulta
 
 master.menu.administrator.challenges.list = Retos
-master.menu.administrator.challenges.create = Crear reto
+master.menu.administrator.challenges.create = Crear Retos
 
-master.menu.administrator.technologyRecords.list = Registro de tecnologias
+master.menu.administrator.technologyRecords.list = Registros de tecnologias
 master.menu.administrator.technologyRecords.create = Crear registro de tecnologia
+
+master.menu.administrator.toolRecords.list = Registros de herramientas
+master.menu.administrator.toolRecords.create = Crear registro de herramienta
+
+master.menu.administrator.overtures.list = Obertura
+master.menu.administrator.overtures.create = Crear Obertura
 
 # master.menu.provider ########################################################
 

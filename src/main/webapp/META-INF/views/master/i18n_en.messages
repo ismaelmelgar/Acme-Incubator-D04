@@ -73,6 +73,11 @@ master.menu.administrator.challenges.create = Create challenge
 master.menu.administrator.technologyRecords.list = Technology Records
 master.menu.administrator.technologyRecords.create = Create technology record
 
+master.menu.administrator.toolRecords.list = Tool Records
+master.menu.administrator.toolRecords.create = Create tool record
+
+master.menu.administrator.overtures.list = Overtures
+master.menu.administrator.overtures.create = Create overtures
 
 # master.menu.provider ########################################################
 
