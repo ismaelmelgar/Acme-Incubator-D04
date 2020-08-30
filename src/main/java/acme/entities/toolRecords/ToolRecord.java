@@ -45,7 +45,7 @@ public class ToolRecord extends DomainEntity {
 	@NotBlank
 	private String				description;
 
-	@Column(length = 50)
+	@Column(length = 200)
 	@Length(min = 1, max = 200)
 	@URL
 	@NotBlank
