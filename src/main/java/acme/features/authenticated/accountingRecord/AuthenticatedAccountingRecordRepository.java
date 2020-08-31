@@ -18,6 +18,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import acme.entities.accountingRecords.AccountingRecord;
+import acme.entities.investmentRounds.InvestmentRound;
 import acme.framework.repositories.AbstractRepository;
 
 @Repository
@@ -31,4 +32,7 @@ public interface AuthenticatedAccountingRecordRepository extends AbstractReposit
 
 	@Query("select ar from AccountingRecord ar where ar.investmentRound.id = ?1 and ar.status = 1")
 	Collection<AccountingRecord> findManyByInvestmentRoundId(int entrepreneurId);
+
+	@Query("select ac.investmentRound from AccountingRecord ac where ac.id = ?1")
+	InvestmentRound findInvestmentRoundByAccountingRecordId(int id);
 }

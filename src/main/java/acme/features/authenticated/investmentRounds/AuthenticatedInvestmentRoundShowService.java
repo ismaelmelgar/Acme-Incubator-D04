@@ -27,7 +27,18 @@ public class AuthenticatedInvestmentRoundShowService implements AbstractShowServ
 	public boolean authorise(final Request<InvestmentRound> request) {
 		assert request != null;
 
-		return true;
+		boolean result = true;
+		Integer investmentRoundId;
+		InvestmentRound investmentRound;
+
+		investmentRoundId = request.getModel().getInteger("id");
+		investmentRound = this.repository.findOneById(investmentRoundId);
+
+		if (investmentRound.getStatus() == false) {
+			result = false;
+		}
+
+		return result;
 	}
 
 	@Override
@@ -40,7 +51,7 @@ public class AuthenticatedInvestmentRoundShowService implements AbstractShowServ
 		int numAR = this.repository.findAccountingRecordByInvestmentRoundId(id);
 		model.setAttribute("numAR", numAR);
 
-		request.unbind(entity, model, "ticker", "creationMoment", "round", "title", "description", "amountMoney", "moreInfo", "entrepreneur.identity.fullName");
+		request.unbind(entity, model, "ticker", "creationMoment", "round", "title", "description", "amountMoney", "moreInfo", "entrepreneur.identity.fullName", "status");
 
 	}
 

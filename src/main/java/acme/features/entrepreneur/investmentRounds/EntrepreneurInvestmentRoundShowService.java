@@ -56,7 +56,7 @@ public class EntrepreneurInvestmentRoundShowService implements AbstractShowServi
 		Forum forum = this.repository.findForumByInvestmentRoundId(id);
 		model.setAttribute("forumId", forum.getId());
 
-		request.unbind(entity, model, "ticker", "creationMoment", "round", "title", "description", "amountMoney", "moreInfo", "entrepreneur.identity.fullName");
+		request.unbind(entity, model, "ticker", "creationMoment", "round", "title", "description", "amountMoney", "moreInfo", "entrepreneur.identity.fullName", "status");
 
 	}
 

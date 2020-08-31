@@ -16,6 +16,7 @@ authenticated.investmentRound.label.description = Descripcion
 authenticated.investmentRound.label.amountMoney = Cantidad de dinero
 authenticated.investmentRound.label.moreInfo = Mas informacion
 authenticated.investmentRound.label.entrepreneur = Registrado por 
+authenticated.investmentRound.label.status = Estado
 
 authenticated.investmentRound.form.button.workProgramme = Programa de Trabajo
 authenticated.investmentRound.form.button.accountingRecord = Registro Contable

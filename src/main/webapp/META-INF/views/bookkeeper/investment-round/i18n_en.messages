@@ -16,6 +16,7 @@ bookkeeper.investmentRound.label.description = Description
 bookkeeper.investmentRound.label.amountMoney = Amount Money
 bookkeeper.investmentRound.label.moreInfo = More Info
 bookkeeper.investmentRound.label.entrepreneur = Registered by 
+bookkeeper.investmentRound.label.status = Status
 
 bookkeeper.investmentRound.form.button.accountingRecord = Accounting Record
 bookkeeper.investmentRound.button.return = Return

@@ -25,6 +25,7 @@
 	<acme:form-textbox code="entrepreneur.investmentRound.label.amountMoney" path="amountMoney" />
 	<acme:form-textbox code="entrepreneur.investmentRound.label.moreInfo" path="moreInfo" />
 	<acme:form-textbox code="entrepreneur.investmentRound.label.entrepreneur" path="entrepreneur.identity.fullName" />
+	<acme:form-checkbox code="entrepreneur.investmentRound.label.status" path="status" />
 
 	<acme:form-submit code="entrepreneur.investmentRound.form.button.forum" action="/authenticated/forum/show?id=${forumId}"
 		method="get" />

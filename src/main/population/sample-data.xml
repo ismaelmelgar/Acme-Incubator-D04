@@ -410,6 +410,7 @@
 		<property name="amountMoney" value="500.0€" />
 		<property name="moreInfo" value="http://www.example.com" />
 		<property name="entrepreneur" ref="entrepreneur1Entrepreneur" />
+		<property name="status" value="false" />
 	</bean>
 
 	<bean id="investmentRound02" class="acme.entities.investmentRounds.InvestmentRound">
@@ -421,6 +422,7 @@
 		<property name="amountMoney" value="500.0€" />
 		<property name="moreInfo" value="http://www.example.com" />
 		<property name="entrepreneur" ref="entrepreneur2Entrepreneur" />
+		<property name="status" value="false" />
 	</bean>
 
 	<bean id="investmentRound03" class="acme.entities.investmentRounds.InvestmentRound">
@@ -432,6 +434,7 @@
 		<property name="amountMoney" value="200.0€" />
 		<property name="moreInfo" value="http://www.example.com" />
 		<property name="entrepreneur" ref="entrepreneur1Entrepreneur" />
+		<property name="status" value="true" />
 	</bean>
 
 	<!-- Work Programmes -->

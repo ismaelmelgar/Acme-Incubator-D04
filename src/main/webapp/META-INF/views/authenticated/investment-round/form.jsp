@@ -25,6 +25,7 @@
 	<acme:form-textbox code="authenticated.investmentRound.label.amountMoney" path="amountMoney" />
 	<acme:form-textbox code="authenticated.investmentRound.label.moreInfo" path="moreInfo" />
 	<acme:form-textbox code="authenticated.investmentRound.label.entrepreneur" path="entrepreneur.identity.fullName" />
+	<acme:form-checkbox code="authenticated.investmentRound.label.status" path="status" />
 
 
 	<acme:form-submit code="authenticated.investmentRound.form.button.workProgramme"

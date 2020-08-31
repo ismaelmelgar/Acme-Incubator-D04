@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.accountingRecords.AccountingRecord;
+import acme.entities.investmentRounds.InvestmentRound;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Authenticated;
@@ -24,7 +25,18 @@ public class AuthenticatedAccountingRecordShowService implements AbstractShowSer
 	public boolean authorise(final Request<AccountingRecord> request) {
 		assert request != null;
 
-		return true;
+		boolean result = true;
+		int accountingRecordId;
+		InvestmentRound investmentRound;
+		accountingRecordId = request.getModel().getInteger("id");
+		investmentRound = this.repository.findInvestmentRoundByAccountingRecordId(accountingRecordId);
+
+		// If the investment round is not already published you can not see their accounting records
+		if (investmentRound.getStatus() == false) {
+			result = false;
+		}
+
+		return result;
 	}
 
 	@Override

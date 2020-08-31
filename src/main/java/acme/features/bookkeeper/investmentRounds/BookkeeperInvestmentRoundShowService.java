@@ -39,7 +39,7 @@ public class BookkeeperInvestmentRoundShowService implements AbstractShowService
 		int numAR = this.repository.findAccountingRecordByInvestmentRoundId(id);
 		model.setAttribute("numAR", numAR);
 
-		request.unbind(entity, model, "ticker", "creationMoment", "round", "title", "description", "amountMoney", "moreInfo", "entrepreneur.identity.fullName");
+		request.unbind(entity, model, "ticker", "creationMoment", "round", "title", "description", "amountMoney", "moreInfo", "entrepreneur.identity.fullName", "status");
 
 	}
 

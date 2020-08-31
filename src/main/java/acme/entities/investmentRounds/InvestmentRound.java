@@ -68,6 +68,8 @@ public class InvestmentRound extends DomainEntity {
 	@URL
 	private String				moreInfo;
 
+	private Boolean				status;
+
 	//Relationships -----------------------------------------------------
 
 	@Valid

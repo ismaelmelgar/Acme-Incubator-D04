@@ -16,6 +16,7 @@ entrepreneur.investmentRound.label.description = Descripcion
 entrepreneur.investmentRound.label.amountMoney = Cantidad de dinero
 entrepreneur.investmentRound.label.moreInfo = Mas informacion
 entrepreneur.investmentRound.label.entrepreneur = Contratista
+entrepreneur.investmentRound.label.status = Estado
 
 entrepreneur.investmentRound.form.button.workProgramme = Programa de Trabajo
 entrepreneur.investmentRound.form.button.accountingRecord = Registro Contable
